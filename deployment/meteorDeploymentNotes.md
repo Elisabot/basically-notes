@@ -1,3 +1,6 @@
+FOLLOW THIS GUIDE
+http://meteortips.com/deployment-tutorial/digitalocean-part-1/
+
 meteor app deployment notes:
 
 Digital Ocean for hosting
