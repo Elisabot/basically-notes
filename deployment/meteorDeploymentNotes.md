@@ -1,6 +1,13 @@
 FOLLOW THIS GUIDE
 http://meteortips.com/deployment-tutorial/digitalocean-part-1/
 
+21.7.20
+tutorial asks us to generate our config files at root of proj, no prob just make sure the path in ur config gets you to the root dir
+
+when running `mup deploy` we saw
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+
+20.7.20
 meteor app deployment notes:
 
 Digital Ocean for hosting
