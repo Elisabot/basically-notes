@@ -31,7 +31,7 @@ for ( let i = 0; i < groceryList.length; i++) {
 
 // while loop
 // careful easy to hang ur compie in this one
-const whileLoop = (arr) => {
+const whileLoop = arr => {
   // look it's just that global vars are gross
   let i = 0
   while ( arr[i] != 'pasta' ) {
@@ -40,6 +40,14 @@ const whileLoop = (arr) => {
   }
   console.log('we escaped')
 }
-whileLoop(groceryList)
+// whileLoop(groceryList)
 
-
+const doWhileLoop = arr => {
+  let i = 0
+  do {
+    i++;
+    console.log('hi ur going to see at least one run outta me, babe ' + '\n' + 'i = ' + i );
+  } while ( i < 0 )
+  console.log('and now I\'m done')
+}
+// doWhileLoop(groceryList);
