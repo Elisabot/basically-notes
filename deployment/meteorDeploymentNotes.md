@@ -1,5 +1,9 @@
-FOLLOW THIS GUIDE
+THIS GUIDE
 http://meteortips.com/deployment-tutorial/digitalocean-part-1/
+
+20.8.20
+taking another run at getting this to build.
+something is wrong with ssh and our pubkey
 
 21.7.20
 tutorial asks us to generate our config files at root of proj, no prob just make sure the path in ur config gets you to the root dir
