@@ -1,6 +1,26 @@
 THIS GUIDE
 http://meteortips.com/deployment-tutorial/digitalocean-part-1/
 
+21.8.20
+ssh client config, touch that
+precidence of settings: command-line options > .ssh/config > .ssh/ssh_config
+
+This fixed it. https://www.digitalocean.com/community/questions/ssh-copy-id-not-working-permission-denied-publickey
+Log in as root
+Edit ssh config:
+sudo nano /etc/ssh/sshd_config
+Change this line:
+PasswordAuthentication no
+to
+PasswordAuthentication yes
+Restart daemon:
+sudo systemctl restart sshd
+
+Do ssh-copy-id from your local:
+ssh-copy-id someuser@<my-ip>
+
+Revert changes to ssh_config if you are security conscious and restart daemon.
+
 20.8.20
 taking another run at getting this to build.
 something is wrong with ssh and our pubkey
