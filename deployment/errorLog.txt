@@ -1,0 +1,36 @@
+mup deploy
+Building App Bundle Locally
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/meteor-promise/promise_server.js:218
+      throw error;
+      ^
+
+Error: EROFS: read-only file system, mkdir '/.deploy'
+    at Object.mkdirSync (fs.js:840:3)
+    at /Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/tools/fs/tools/fs/files.ts:1629:23
+    at mkdir_p (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/tools/fs/tools/fs/files.ts:446:5)
+    at Object.mkdir_p (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/tools/fs/tools/fs/files.ts:441:19)
+    at new Builder (/tools/isobuild/builder.js:123:13)
+    at /tools/isobuild/bundler.js:2916:35
+    at /tools/isobuild/bundler.js:3349:22
+    at Object.capture (/tools/utils/buildmessage.js:283:5)
+    at bundle (/tools/isobuild/bundler.js:3164:31)
+    at /tools/isobuild/bundler.js:3109:32
+    at Slot.withValue (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/@wry/context/lib/context.js:73:29)
+    at Object.withCache (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/tools/fs/tools/fs/files.ts:1650:39)
+    at Object.bundle (/tools/isobuild/bundler.js:3109:16)
+    at buildCommand (/tools/cli/commands.js:1078:30)
+    at /tools/cli/commands.js:941:25
+    at Function.run (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/tools/tool-env/tools/tool-env/profile.ts:289:14)
+    at /tools/cli/commands.js:939:18
+    at /Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/meteor-promise/fiber_pool.js:43:40
+ => awaited here:
+    at Promise.await (/Users/elisabethmeyer/.meteor/packages/meteor-tool/.1.10.2.jfu8no.ns4em++os.osx.x86_64+web.browser+web.browser.legacy+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/meteor-promise/promise_server.js:60:12)
+    at /tools/cli/main.js:1529:7 {
+  errno: -30,
+  syscall: 'mkdir',
+  code: 'EROFS',
+  path: '/.deploy'
+}
+
+=> Build Error. Check the logs printed above.

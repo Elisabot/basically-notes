@@ -1,6 +1,18 @@
 THIS GUIDE
 http://meteortips.com/deployment-tutorial/digitalocean-part-1/
 
+02.9.20 
+RUN `mup setup` ANYTIME CONFIG IS UPDATED
+`mup setup` ran successfully
+`mup deploy` has failed 
+`/Users/elisabethmeyer/Developement/MyCelia/MyCelia does not exist` I must have something goofy in the config
+I am now seeing from the documentation
+`path - Path to the meteor app, relative to the config. If your config is in app/.deploy, the path would be ../.`
+Updated and mup setup run, mup deploy is now failing with EROFS write only file-system permissions error
+I've run `chmod 755` after some consideration of vulnerability
+no dice
+
+
 21.8.20
 ssh client config, touch that
 precidence of settings: command-line options > .ssh/config > .ssh/ssh_config
