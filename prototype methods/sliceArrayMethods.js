@@ -12,7 +12,7 @@
 // 
 // IF YOU DON'T GIVE IT AN ARGUMENT IT JUST COPIES THE ORIGINAL ARRAY
 
-// oh also there is some reall bullshit around slicing specific indexes
+// oh also there is some reall **** around slicing specific indexes
 const groceryList = [
 	'popcorn', 'bananas', 'coffee beans', 'brown rice',
 	'pasta', 'coconut oil', 'plantains'
