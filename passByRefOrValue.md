@@ -14,6 +14,8 @@ let myFun = obj => {
 ```
 The local reference to `obj` creates a copy of that object and the original object remains unchanged.
 
+Passing by value is useful when building a multi-threaded application.
+
 ## Pass by reference
 
 The inbound paramater value references the original value in memory, thereby changing that external value when the function runs.
