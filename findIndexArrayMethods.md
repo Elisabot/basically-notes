@@ -3,7 +3,7 @@ regarding finding the first index of an element in an array
 .indexOf() expects a value as the first parameter
 	good choice for returning the index of stings, numbers, booleans— primitives
 
-.findIndex() expects a callback, like you— you dirty hoe, jk; return the index of an object or non-primitive or when your find condition is more complex than just a value
+.findIndex() expects a callback, like you— you worthwhile, smart lil hoe, jk; return the index of an object or non-primitive or when your find condition is more complex than just a value
 
 	`arr.findIndex(arr => arr >= 13)`
 
