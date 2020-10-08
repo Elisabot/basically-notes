@@ -8,6 +8,7 @@ console.log(arrOfChars.toString())
 
 // cool, join gives you options for what to insert
 console.log(arrOfChars.join(''))
+
 // if you leave no arg it comma seperates
 // otherwise you can put whatever you want in there
 console.log(arrOfChars.join('potato'))
