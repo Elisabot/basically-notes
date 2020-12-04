@@ -44,3 +44,23 @@ const extraChunkyPromiseInPlace = () => {
     }
   })
 }
+
+// chains
+
+// here's a synchronous chain
+firstPromise()
+  .then((resolvedValue) => {
+    return secondPromise(resolvedValue)
+  })
+  .then((nextResolvedValue) => {
+    return yetAnotherPromise(nextResolvedValue)
+  })
+  .then((successMessage) => console.log(successMessage))
+  .catch(handleFailure)
+
+// async chain using .all
+Promise.all([sillyPromise, smartPromise, purplePromise])
+  .then((arrOfResolvedValues) => {
+  //do stuff with arrOfResolvedValues
+  })
+  .catch((rejectionErr) => console.log(rejectionErr));
