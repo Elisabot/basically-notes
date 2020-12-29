@@ -5,13 +5,13 @@ let condition = true
 const coolPromiseBro = (value) => { 
   return new Promise ((resolve, reject) => {
       if (condition) {
-        resolve('action or data may be specified here')
+        resolve(`action or ${value} data here`)
       } else {
-        reject('action or data may be specified here')
+        reject(`action or ${value} data here`)
       }
     })
 } 
-// here we cook up a few handlers to do something with 
+// let's cook up a few handlers to do something with 
 // the data provided by our promise definition
 const handleSuccess = (resolvedValue) => console.log(resolvedValue)
 const handleFailure = (rejectionValue) => console.log(rejectionValue)
@@ -21,8 +21,10 @@ coolPromiseBro(someValue)
   .then(handleSuccess)
   .catch(handleFailure)
 
-// like so many flexible things, we can define functions in-situ or pass em in
-// I've seen this the executor func extracted
+// like so many flexible things, we can define 
+// the EXECUTOR in-situ 
+// or pass em in like this
+
 const executor = (resolve, reject) => {
   if (condition) {
     resolve('action or data')
@@ -30,6 +32,8 @@ const executor = (resolve, reject) => {
     reject('action or data')
   }
 }
+
+// seperation of concerns, my brother my sister
 
 const passDisPromiseAnExecutor = new Promise (executor);
 // you don't even need to slap a handler on it
@@ -45,8 +49,7 @@ const extraChunkyPromiseInPlace = () => {
   })
 }
 
-// chains
-
+// CHAINS
 // here's a synchronous chain
 firstPromise()
   .then((resolvedValue) => {
