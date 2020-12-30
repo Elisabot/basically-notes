@@ -1,30 +1,23 @@
 // as many times as it takes, love
-let condition = true
 // what's one look like?
+const condition = true
 
-const coolPromiseBro = (value) => { 
+const coolPromiseBro = () => { 
   return new Promise ((resolve, reject) => {
-      if (condition) {
-        resolve(`action or ${value} data here`)
-      } else {
-        reject(`action or ${value} data here`)
-      }
-    })
-} 
-// let's cook up a few handlers to do something with 
-// the data provided by our promise definition
-const handleSuccess = (resolvedValue) => console.log(resolvedValue)
-const handleFailure = (rejectionValue) => console.log(rejectionValue)
+    if (condition) {
+      resolve(`some action or data`)
+    } else {
+      reject(`some action or data`)
+    }
+  })
+}
 
-// call the promise passing it our handlers
-coolPromiseBro(someValue)
-  .then(handleSuccess)
-  .catch(handleFailure)
+// now make it _ES6exier_
+const cutePromiseLady = new Promise ((resolve, reject) => {
+    return condition ? resolve(`some action or data`) : reject(`some action or data`)
+  })
 
-// like so many flexible things, we can define 
-// the EXECUTOR in-situ 
-// or pass em in like this
-
+// we can define the EXECUTOR seperately u know
 const executor = (resolve, reject) => {
   if (condition) {
     resolve('action or data')
@@ -33,18 +26,34 @@ const executor = (resolve, reject) => {
   }
 }
 
+// or ofc it's spry es6 cousin
+const executorLite = (resolve, reject) => {
+  return condition ? resolve(`action or data`) : reject(`action or data`)
+}
+// then pass it in
+const niceLookinPromiseYouGotThere = new Promise (executor);
+
 // seperation of concerns, my brother my sister
 
-const passDisPromiseAnExecutor = new Promise (executor);
-// you don't even need to slap a handler on it
+// let's cook up a few handlers to do something with 
+// the data provided by our promise definition
+const handleSuccess = (resolvedValue) => console.log(resolvedValue)
+const handleFailure = (rejectionValue) => console.log(rejectionValue)
+// we're just logging it but think about the possibilities!
+// update state, trigger a chain reaction, feed a monkey
 
-// OR you could work with everything happening in place
+// call a promise and pass it our handlers
+coolPromiseBro()
+  .then(handleSuccess)
+  .catch(handleFailure)
+
+// you could even work with EVERYTHING happening in place
 const extraChunkyPromiseInPlace = () => { 
   return new Promise ((resolve, reject) => {
     if (condition) {
-      resolve('action or data, can we do a handler in here?')
+      resolve('action or data')
     } else {
-      reject('action or data, can we do a handler in here?')
+      reject('action or data')
     }
   })
 }
@@ -52,13 +61,13 @@ const extraChunkyPromiseInPlace = () => {
 // CHAINS
 // here's a synchronous chain
 firstPromise()
-  .then((resolvedValue) => {
-    return secondPromise(resolvedValue)
+  .then(data => {
+    return secondPromise(data)
   })
-  .then((nextResolvedValue) => {
-    return yetAnotherPromise(nextResolvedValue)
+  .then((dataTwo) => {
+    return yetAnotherPromise(dataTwo)
   })
-  .then((successMessage) => console.log(successMessage))
+  .then((dataThree) => console.log(dataThree))
   .catch(handleFailure)
 
 // async chain using .all
