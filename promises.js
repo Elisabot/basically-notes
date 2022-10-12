@@ -76,3 +76,18 @@ Promise.all([sillyPromise, smartPromise, purplePromise])
   //do stuff with arrOfResolvedValues
   })
   .catch((rejectionErr) => console.log(rejectionErr));
+
+  // oh hey it's been years and I'm back huny
+  const myLuck = new Promise((resolve, reject) => {
+    if(Math.random() < 0.5 {
+      resolve('you got it honey')
+    } else {
+      reject(new Error('uh oh you are not lucky huny'))
+    });
+
+    myLuck.then(message => {
+      console.log(message)
+    }).catch(error => {
+      console.log(error)
+    });  
+  })
