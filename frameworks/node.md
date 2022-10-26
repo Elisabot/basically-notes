@@ -26,7 +26,7 @@ stores and controls information abt the environment, like the current working di
 `process.memoryUsage()` returns information about CPU demands
 ###### os
 gotta be imported in order to use, unlike the others. 
-`.type()` operating system, `.arch()` CPU architecture, `.networkInterfaces()` IP, MAC address, etc., `.homedir()` current user's home directory, `.hostname()`, `.uptime()` of the system, and so much more
+`.type()` operating system eg. Darwin, `.arch()` CPU architecture, `.networkInterfaces()` IP, MAC address, etc., `.homedir()` current user's home directory, `.hostname()`, `.uptime()` of the system, and so much more
 ###### util
 methods for debugging and maintaining, also must be required to use. 
 `.types` is useful for type checking
