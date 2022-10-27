@@ -9,6 +9,7 @@ let newWarningListener = (data) => {
 
 // using the .on method we name our callback and supply our listener
 myWarnEmitter.on('warning', newWarningListener)
+
 // emits an event, calling the the above event with .on's parameters
 myWarnEmitter.emit('warning', 'christ is coming for christmas')
 
