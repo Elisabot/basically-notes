@@ -1,5 +1,26 @@
 # Everything Hyper Text Transport Protocol
 
+## Response Codes
+100-199 Informational
+200-299 Successful
+  * `200 ok`
+  * `201 created`
+  * `202 accepted` 
+300-399 Redirect
+400-499 Client Errors
+  * `400 bad request` bad syntax, invalid, deceptive routing, etc
+  * `401 unauthorized` the client must authenticate itself to get the requested response
+  * `403 Forbidden` the client is authenticated and does not have rights to access
+  * `404 Not Found` the server can't find the requested resource
+  * `408 request timeout` sent when an idle connection to the server without any previous request by the client would like to be shut down by the server, not neccessary to shut a connection but sometimes sent
+  * `418 I'm a teapot` the server refuses to brew coffee with a teapot
+500-599 Server Errors
+  * `500 internal server error` something happened the server didn't know how to handle
+  * `501 not implemented` servers are only required to support `GET` and `HEAD` other request methods may not be implemented
+  * `502 bad gateway` an invalid response was aquired while serving as a gateway for a request
+  * `503 service unavailable` the server is not ready to handle the request, commonly used for maintenance or when the server is overwhelmed
+
+## Protocols
 #### TCP _Transmission Control Protocol_
 Allows two hosts to connect and exchange streams of data, guaranteeing delivery of packets in order as sent. Very reliable.
 

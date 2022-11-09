@@ -37,6 +37,12 @@ stores and controls information abt the environment, like the current working di
 gotta be imported in order to use, unlike the others. 
 `.type()` operating system eg. Darwin, `.arch()` CPU architecture, `.networkInterfaces()` IP, MAC address, etc., `.homedir()` current user's home directory, `.hostname()`, `.uptime()` of the system, and so much more
 
+###### querystring
+just the parsing and formatting of url query strings, available in url module in newer versions
+
+###### url
+used to deconstruct or construct parts of an URL, instantiating a new URL object gives you `hostname`, `pathname`, `searchParams`
+
 ###### util
 methods for debugging and maintaining, also must be required to use. 
 `.types` is useful for type checking
