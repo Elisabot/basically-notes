@@ -38,4 +38,7 @@ Fun fact, TLS evolved out of the old SSL _secure sockets layer_ protocol.
 3 is still just a draft, but utilizes a tsp called QUIC which is like a form of UDP
 
 ##### note
-IPC _inter-process communication_ is a protocol for local socket communication using the kernal :shrug: is this what a locl dev environment does?
+  * IPC _inter-process communication_ is a protocol for local socket communication using the kernal :shrug: is this what a locl dev environment does?
+  * side node: thinking about localhost again. port numbers vs IP addresses, same? not same??
+  not same, love. an IP address refers to one machine or system in a network, whereas a port specifies the interface of connection to an application or service on a system
+  

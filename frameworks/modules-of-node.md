@@ -19,7 +19,10 @@ when imported, provides the `EventEmitter` class which contains `.on()` a listen
 import files and stuff
 
 ###### http
-for engaging with http network requests. methods include `.createServer()` which makes an instance of a Server object 
+for engaging with http network requests. methods include
+  `createServer()` which makes an instance of a Server object and
+  `request()` which configures details of a request and what to do with a response
+  `get()` is a method which automatically sets the call method to `GET` and calls `req.end()` automatically
 
 ###### net
 asynchronous network api for creating stream-based TCP or IPC servers and connections, extended to the http module
