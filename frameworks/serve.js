@@ -2,7 +2,7 @@
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-  res.end('this is the end <3')
+  res.end('this is an end')
 })
 
 server.listen(8080, () => {

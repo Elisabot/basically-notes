@@ -1,6 +1,6 @@
 # Everything Hyper Text Transport Protocol
 
-## Response Codes
+#### Response Codes
 100-199 Informational
 200-299 Successful
   * `200 ok`

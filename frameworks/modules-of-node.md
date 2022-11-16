@@ -34,17 +34,25 @@ stores and controls information abt the environment, like the current working di
 `process.memoryUsage()` returns information about CPU demands
 
 ###### readline
-`.createInterface()` returns an `EventEmitter` set up to emit line events
+read data from streams, any streams! one line at a time. `.createInterface()` returns an `EventEmitter` set up to emit line events
 
 ###### os
-gotta be imported in order to use, unlike the others. 
-`.type()` operating system eg. Darwin, `.arch()` CPU architecture, `.networkInterfaces()` IP, MAC address, etc., `.homedir()` current user's home directory, `.hostname()`, `.uptime()` of the system, and so much more
+gotta be imported in order to use. useful methods include:
+* `.type()` operating system eg. Darwin
+* `.arch()` CPU architecture
+* `.networkInterfaces()` IP, MAC address, etc.
+* `.homedir()` current user's home directory
+* `.hostname()`
+* `.uptime()` of the system
+...and so much more
 
 ###### querystring
 just the parsing and formatting of url query strings, available in url module in newer versions
 
 ###### url
-used to deconstruct or construct parts of an URL, instantiating a new URL object gives you `hostname`, `pathname`, `searchParams`
+used to deconstruct or construct parts of an URL, instantiating a new URL object gives you access to `hostname`, `pathname`, `searchParams`
+
+**note** `.search` differs from `.query` in that search includes the preceeding question mark and does not decode the query string, whereas query when returning an object will decode both keys and values which can result in gotchas. **beware the _~tilde_**
 
 ###### util
 methods for debugging and maintaining, also must be required to use. 
