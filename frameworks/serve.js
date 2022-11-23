@@ -1,13 +1,15 @@
-// creating a server instance
-const http = require('http')
+const http = require('node:http')
 
-const server = http.createServer((req, res) => {
-  res.end('this is an end')
-})
+const port = 4000
+const hostname = '127.0.0.1'
 
-server.listen(8080, () => {
-  const { address, port } = server.address()
-  console.log(`Server listening on http://${address}:${port}`)
-})
+const server = http.createServer()
 
-// something here isn't working <3
+server.on('request', (request, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('HELLO WORLD.\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
