@@ -1,5 +1,5 @@
-oh hai
+oh hello,
 
-this is a place where we fight thru layers of understanding the on-fire with bananas-on-top world of programming to get to the gloriful hills of understanding. 
+this is a place where we fight thru the layers of understanding the world of programming around us. yes, some of it— maybe most of it will be silly and simple.
 
-there will be cursing. but there will also be victory.
+there may be cursing but there will also be victory.
