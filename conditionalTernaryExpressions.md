@@ -12,7 +12,7 @@ becomes ternary
 
 ` if something ? do this : or else this`
 
-if with assignment
+example of an if with assignment
 
 ``
 if ( something ) this = that;
