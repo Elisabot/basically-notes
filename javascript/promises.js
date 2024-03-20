@@ -10,12 +10,12 @@ const coolPromiseBro = () => {
       reject(`some action or data`)
     }
   })
-}
+};
 
 // now make it _ES6exier_
 const cutePromiseLady = new Promise ((resolve, reject) => {
-    return condition ? resolve(`some action or data`) : reject(`some action or data`)
-  })
+  return condition ? resolve(`some action or data`) : reject(`some action or data`)
+})
 
 // we can define the EXECUTOR seperately u know
 const executor = (resolve, reject) => {
@@ -24,12 +24,12 @@ const executor = (resolve, reject) => {
   } else {
     reject('action or data')
   }
-}
+};
 
 // or ofc it's spry es6 cousin
 const executorLite = (resolve, reject) => {
   return condition ? resolve(`action or data`) : reject(`action or data`)
-}
+};
 // then pass it in
 const niceLookinPromiseYouGotThere = new Promise (executor);
 
@@ -37,8 +37,9 @@ const niceLookinPromiseYouGotThere = new Promise (executor);
 
 // let's cook up a few handlers to do something with 
 // the data provided by our promise definition
-const handleSuccess = (resolvedValue) => console.log(resolvedValue)
-const handleFailure = (rejectionValue) => console.log(rejectionValue)
+const handleSuccess = (resolvedValue) => console.log(resolvedValue);
+const handleFailure = (rejectionValue) => console.log(rejectionValue);
+
 // we're just logging it but think about the possibilities!
 // update state, trigger a chain reaction, feed a monkey
 
@@ -56,7 +57,7 @@ const extraChunkyPromiseInPlace = () => {
       reject('action or data')
     }
   })
-}
+};
 
 // CHAINS
 // here's a synchronous chain
@@ -83,11 +84,11 @@ Promise.all([sillyPromise, smartPromise, purplePromise])
       resolve('you got it honey')
     } else {
       reject(new Error('uh oh you are not lucky huny'))
-    });
+    })
 
     myLuck.then(message => {
       console.log(message)
     }).catch(error => {
       console.log(error)
     });  
-  })
+  });
