@@ -1,12 +1,19 @@
-ternary expressions and if statements
+if else
 
 ```
 if (something) {
 	do this
 } else {
 	do this instead
-}```
+}
+```
 
-becomes simply
+becomes ternary
 
-`something ? do this : do this instead`
+` if something ? do this : or else this`
+
+if with assignment
+
+``
+if ( something ) this = that;
+``
